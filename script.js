@@ -537,4 +537,37 @@ Tile.prototype.updatePosition = function (position) {
   this.x = position.x;
   this.y = position.y;
 };
+	//Toggle Color Modes
+	function ToggleMode()
+	{
+		var dark = document.getElementById('colormode');
+		
+		if(dark.checked == true)
+		{
+			DarkMode();
+		}
+		else
+		{
+			LightMode();
+		}
+	}
+	
+	//Dark Mode
+	function DarkMode()
+	{
+		document.body.style.backgroundColor = "#212121";
+		document.getElementById("sc").style.backgroundColor = "black";
+		document.getElementById("game-container").style.backgroundColor = "black";
+		document.getElementById("main").style.color = "white";
+		document.getElementById("sc").style.color = "white";
+	}
+	//Light Mode
+	function LightMode()
+	{
+		document.body.style.backgroundColor = "#faf8ef";
+		document.getElementById("game-container").style.backgroundColor = "black";
+		document.getElementById("main").style.color = "#776E65";
+		document.getElementById("game-container").style.backgroundColor = "#bbada0";
+		document.getElementById("sc").style.backgroundColor = "#bbada0";;
+	}
 
