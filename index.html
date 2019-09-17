@@ -10,11 +10,12 @@
 </style>
 </head>
 <body>
+<div id="main">
 <!-- partial:index.partial.html -->
 <div class="container">
   <div class="heading">
     <h1 class="title">2048</h1>
-    <div class="score-container">0</div>
+    <div id="sc" class="score-container">0</div>
   </div>
   <!--<p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>-->
 
@@ -62,8 +63,12 @@
     <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
   </p>-->
 </div>
+<br/>
+<br/>
+<input type="checkbox" id="colormode" onClick="ToggleMode();">Dark Mode<br>
+<input type="checkbox" id="chg" onClick="SwitchColor();">Rainbow Board<br>
 <!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js'></script>
 <script  src="./script.js"></script>
 <script>
 		
@@ -76,6 +81,24 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+
+function SwitchColor()
+{
+var chngclr = document.getElementById('chg');
+if(chg.checked == true)
+{
+	sw = setInterval(changeColor,1000);
+
+}
+else
+{
+
+div.style.backgroundColor = "black";
+clearInterval(sw);
+sw = 0;
+}
 }
 
 function changeColor(){
@@ -93,10 +116,7 @@ function changeColor(){
 		$(".tile.tile-2048").css("background-color","#FFF");
   
 }
-
-setInterval(changeColor,1000);
-
-
 	</script>
+	</div>
 </body>
 </html>
