@@ -564,7 +564,7 @@ Tile.prototype.updatePosition = function (position) {
 	//Light Mode
 	function LightMode()
 	{
-		document.body.style.backgroundColor = "#faf8ef";
+		document.body.style.backgroundColor = "#fff";
 		document.getElementById("game-container").style.backgroundColor = "black";
 		document.getElementById("main").style.color = "#776E65";
 		document.getElementById("game-container").style.backgroundColor = "#bbada0";
