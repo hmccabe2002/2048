@@ -5,11 +5,9 @@ html, body {
   color: #776E65;
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
+  height: 100%;
 }
 
-body {
-  margin: 80px 0;
-}
 
 .heading:after {
   content: "";
@@ -97,7 +95,6 @@ h1.title {
 
 p {
   margin-top: 0;
-  margin-bottom: 10px;
   line-height: 1.65;
 }
 
@@ -156,7 +153,7 @@ hr {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  background: #000;
+  background: #bbada0;
   border-radius: 6px;
   width: 500px;
   height: 500px;
